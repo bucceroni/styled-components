@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+//COMPONENTS
+import Button from './components/Button';
+import ButtonAdaptingBasedOnProps from './components/ButtonAdaptingBasedOnProps';
+import Container from './components/Container';
+import Title from './components/Title';
+import Wrapper from './components/Wrapper';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Wrapper>
+        <Title>Hello World!</Title>
+      </Wrapper>
+      <Container>
+        <Button>Normal Button</Button>
+        <Button primary>Primary Button</Button>
+      </Container>
+      <div>
+        <ButtonAdaptingBasedOnProps>
+          Button Adapting Based On Props
+        </ButtonAdaptingBasedOnProps>
+        <ButtonAdaptingBasedOnProps primary>
+          Button Adapting Based On Props - Primary
+        </ButtonAdaptingBasedOnProps>
+      </div>
+    </>
   );
 }
 
